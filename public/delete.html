@@ -1,0 +1,52 @@
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var txt = $("input");
+           // var f1 =$("f");
+            var da = $("#d2");
+            var d = $("#d1");
+            var i = {};
+            $("#sub").on("click",function(e){
+              e.preventDefault()
+                $("input").each(function(j){
+                    i[$(txt[j]).attr("name")]= $(txt[j]).val();
+                      $(txt[j]).val();
+                     console.log($(txt[j]).val());  
+                 });
+                
+               $.ajax({
+                    url : "/users/1",
+                    type : "delete",
+                    data : i,
+                    success :function(name){
+                      console.log("hi");
+                        console.log(name);
+                          d.append("</p> Firstname:"+name.firstname+"</p>");
+                          d.append("</p> Lastname:"+name.lastname+"</p>");
+                    }
+                    })
+               
+            })
+        })
+    </script>
+    </head>
+    <body>
+        <form id="f" action ="/users" method="post">
+       <!-- <div="d2">-->
+              First name:<br>
+              <input type="text" name="firstname">
+              <br>
+              Last name:<br>
+              <input type="text" name="lastname">
+
+
+              <button type="submit" id="sub"value="Submit">Submit</button>
+           <!--</div>-->
+           </form>
+            <div id ="d1">
+
+            </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+#leftcolumn {
+	width:47.5%;
+}
+#middlecolumn{
+	width: 47.5%;
+margin:0;
+}
+#rightcolumn{
+clear: both;
+float:none;
+width:auto;
+padding: 20px 0 0 0;
+}
+.nav ul li{
+	width:25%;
+	height: auto;
+	border bottom:1px solid black; 
+}
+.bottom{
+	margin:0;
+}
+img{
+max-width:100%;
+height: auto;
+margin: 0 0 10px 0;
+
+}
+@media screen and (max-width:500px){
+	div.nav ul li{
+		width:50%;
+	}
+	.mobilecollapse{
+		
+		float:none;
+		margin-right: 0;
+		width: auto;
+	}
+	.b{
+		display: none;
+	}
+	.c{
+		display:none;
+	}
+}

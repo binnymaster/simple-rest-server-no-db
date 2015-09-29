@@ -1,0 +1,19 @@
+html, body {
+ margin: 0px;
+ padding: 0px;
+ border: 0px;
+ }
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+
+}
+li.nav{
+	display: inline;
+}
+.common{width: 100%;}
+.first{ float: left; width: 33%; }
+.second{ float: right; width: 35%; }
+.third{ display: inline-block; width: 35%; }
