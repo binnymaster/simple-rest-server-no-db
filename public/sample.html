@@ -1,0 +1,22 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+$("#loaddata").click(function(){ 
+$.ajax({url:"ajaxexample.txt",success:function(ajaxresult){
+$("#ajaxrequest").html(ajaxresult);
+}});
+});
+});
+</script>
+</head>
+<body>
+ 
+<div>Click button to load AJAX returned data</div>
+<button id="loaddata">Load data for ajaxrequest Div</button>
+<div id="ajaxrequest"></div>
+ 
+</body>
+</html>
