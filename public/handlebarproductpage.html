@@ -1,0 +1,69 @@
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!--<script src="http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js"></script>-->
+<script src="javascripts/productpagehandlebar.js"></script>
+</head>
+<body>
+	<!--nav class start-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+   
+    <div>
+      <ul class="nav navbar-nav">
+      	<li><a href="#">Store</a></li>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Catlog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--nav class end-->
+<!--vertical menu start-->
+<ul class="nav nav-pills nav-stacked col-xs-2">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Menu 1</a></li>
+  <li><a href="#">Menu 2</a></li>
+  <li><a href="#">Menu 3</a></li>
+</ul>
+<!--end vertical menu start-->
+<!--add item-->
+
+<div class="col-xs-9">
+  <form class="inline" role="form">
+    <label class="serach">Search &nbsp;<input type="text" name="serach" id="txt1" placeholder="serach item by name"></label> <br><br>
+    <label class="additem">Add Item <input type="text" name="additem" id="item" placeholder="Item Name"></label>
+    <label class="description"> <input type="text" name="description" id="des" placeholder="Description"></label>
+    <label class="price"> <input type="number" name="price" id="price" placeholder="price"></label>
+    <label class="add"> <button id="add">Add </button></label>
+
+
+  </div>
+</form>
+  <!--end add one-->
+<script src="javascripts/handlebars.js"></script>
+<div class ="col-xs-9 " id="ad">
+ <script id="template" type="text/x-handlebars-template">
+ <div class='well well-lg'value="{{id}}" name='div2' style="min-height: 120px;">
+    <div  class='col-md-8' id='innerdiv1'>
+    <h3>{{additem}}</h3>
+    <p>{{description}}</p>
+    </div>
+    <div class='row form-inline col-md-4'id='innerdiv2'>
+    <br>
+    <button type='button' class='btn btn-primary col-xs-2'>{{price}}</button>
+    <h4 class='glyphicon glyphicon-remove-sign pull-right' id={{id}}></h4>
+    </div>
+ </div>
+</script>
+</div>
+<script src="http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js"></script></body>
+</html>
