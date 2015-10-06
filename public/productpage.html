@@ -3,6 +3,7 @@
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -12,9 +13,7 @@
 	<!--nav class start-->
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
-   <!-- <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div>-->
+   
     <div>
       <ul class="nav navbar-nav">
       	<li><a href="#">Store</a></li>
@@ -36,18 +35,21 @@
 </ul>
 <!--end vertical menu start-->
 <!--add item-->
+
 <div class="col-xs-9">
-    <label class="serach">Search<input type="text" name="serach" id="txt1" placeholder="serach item by name"></label> <br>
+  <form class="inline" role="form">
+    <label class="serach">Search &nbsp;<input type="text" name="serach" id="txt1" placeholder="serach item by name"></label> <br><br>
     <label class="additem">Add Item <input type="text" name="additem" id="item" placeholder="Item Name"></label>
     <label class="description"> <input type="text" name="description" id="des" placeholder="Description"></label>
-    <label class="price"> <input type="text" name="price" id="price" placeholder="price"></label>
+    <label class="price"> <input type="number" name="price" id="price" placeholder="price"></label>
     <label class="add"> <button id="add">Add </button></label>
 
 
   </div>
+</form>
   <!--end add one-->
 <div class ="col-xs-9 " id="ad">
-
+  
 </div>
 </body>
 </html>
