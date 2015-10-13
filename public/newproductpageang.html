@@ -1,0 +1,69 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+</head>
+<body data-ng-app="app">
+  <!--nav class start-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+   
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="#">Store</a></li>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Catlog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--nav class end-->
+<!--vertical menu start-->
+<ul class="nav nav-pills nav-stacked col-xs-2">
+  <li class="active"><a href="#home">Home</a></li>
+  <li><a href="#aboutus">About US</a></li>
+  <li><a href="#menu2">Menu 2</a></li>
+  <li><a href="#menu3">Menu 3</a></li>
+</ul>
+ 
+
+
+<!--end vertical menu start-->
+<!--add item-->
+
+<div class="col-xs-9" data-ng-controller="itemctrl">
+  <form class="inline" role="form" >
+    <label class="serach">Search &nbsp;<input type="text" name="serach"  placeholder="serach item by name" data-ng-model="serach"></label> <br><br>
+    <label class="additem">Add Item <input type="text" name="additem"  placeholder="Item Name" data-ng-model="itemctrl.list.additem"></label>
+    <label class="description"> <input type="text" name="description" placeholder="Description"data-ng-model="itemctrl.list.description"></label>
+    <label class="price"> <input type="number" name="price"  placeholder="price"data-ng-model="itemctrl.list.price"></label>
+    <label class="add"> <button  data-ng-click="appenddata(itemctrl.list)">Add </button></label>
+  </form>
+
+  <!--end add one-->
+  <div class ="col-xs-9 " id="ad" data-ng-repeat="product in products |filter:itemsearch">
+   <div class='well well-lg' name='div2'  style="min-height: 120px;" id='{{product.id}}'>
+      <div  class='col-md-8' id='innerdiv1'>
+        <h3>{{product.additem}}</h3>
+         <p>{{product.description}}</p>
+      </div>
+      <div class='row form-inline col-md-4'id='innerdiv2'>
+        <br>
+        <button type='button' class='btn btn-primary col-xs-2' style="min-width: 100px;" >{{product.price|currency}}</button>
+        <h4 class='glyphicon glyphicon-remove-sign pull-right'id="{{product.id}}" data-ng-click="deleteitem(product.id)">{{product.id}}</h4>
+      </div>
+    </div>
+  </div>  
+</div>
+<script src="javascripts/newproductpageang.js"></script>
+
+</body>
+</html>
