@@ -29,9 +29,9 @@ var store = angular.module('itemctrl', []);
 		
 	}
 		//delete item
-	store.deleteitem=function(id)
+	store.deleteitem=function(id,index)
 		{	var Id= id;
-			//console.log(data.id);
+			//console.log(data.id)ss;
 			for(i in store.itm)
 			{
 				if(store.itm[i].id==id)
@@ -39,8 +39,8 @@ var store = angular.module('itemctrl', []);
 					console.log(store.itm[i].id);
 					$http.delete("/users"+"/"+id).success(function(id){
 					console.log(Id + " is deleted");
-					store.itm.splice(i.id,1);
-					
+					store.itm.splice(index,1);
+					//$scope.splice((id, 1)[0]);
 					});
 				}
 			}	
