@@ -42,7 +42,19 @@
 </ul>
   <!--view template-->
   
-  
+  <script type="text/ng-template" id="Home.html">
+
+    <h2> Home</h2>
+    {{message}}
+
+  </script>
+
+  <script type="text/ng-template" id="Aboutus.html">
+
+    <h2> Aboutus</h2>
+    {{message}}
+
+  </script>
  
 <!--end vertical menu start-->
 <!--add item-->
@@ -66,7 +78,7 @@
       <div class='row form-inline col-md-4'id='innerdiv2'>
         <br>
         <button type='button' class='btn btn-primary col-xs-2' style="min-width: 100px;" >{{product.price|currency}}</button>
-        <h4 class='glyphicon glyphicon-remove-sign pull-right'id="{{product.id}}" data-ng-click="store.deleteitem(product.id)">{{product.id}}</h4>
+        <h4 class='glyphicon glyphicon-remove-sign pull-right'id="{{product.id}}" data-ng-click="store.deleteitem(product.id)" style="cursor: pointer;">{{product.id}}</h4>
       </div>
     </div>
   </div>  

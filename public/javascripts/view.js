@@ -3,11 +3,11 @@ listitem.config(['$routeProvider',
   function($routeProvider) {
   	
     $routeProvider.when('/home', {
-		templateUrl:'templates/home.html',
+		templateUrl:'Home.html',
 		controller: 'homeController'
     })
     .when('/aboutus', {
-		templateUrl: 'templates/aboutus.html',
+		templateUrl: 'Aboutus.html',
 		controller: 'aboutusController'
     })
     .otherwise({
